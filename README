@@ -1,0 +1,43 @@
+README
+## Getting Started with E2E testing solution -Playwright
+- Build an image with [Dockerfile](Dockerfile) that contains a basic Docker configuration to build and start the project:
+1. Download project from Github repository
+2. Open a terminal
+3. Go to the project root directory playwright.
+4. Build image with:
+```shell
+docker build -t playwright-tests .
+```
+5. Run the project with the name or id of the created image
+~~~ shell
+ docker run playwright-tests  
+~~~
+# Perform these steps only for a new project
+- Install libs locally
+~~~shell
+ npm init playwright@latest
+~~~
+- Available Scripts
+In the project directory, you can run:
+~~~shell
+npx playwright test
+~~~
+- Other commands
+Run your tests with UI Mode for a better developer experience with time travel debugging
+~~~shell
+npx playwright test --ui
+~~~
+View Report html with:
+~~~shell
+npx playwright show-report
+~~~
+Perform a debug with:
+~~~shell
+npx playwright test --debug
+~~~
+Run all browsers:
+~~~shell
+npx playwright test --browser=all
+~~~
+## Learn More
+You can learn more in the [playwright documentation](https://playwright.dev/).
