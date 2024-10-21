@@ -81,7 +81,7 @@ test('TC 4 Error on the Form', async ({ page }) => {
   await check.click();
   const saveButton = iframe.locator('button:has-text("Save")');
 
-  // The button shouldn't be enable because numeric numbers are not accepted in the first and last name
+  // The button shouldn't be enable because numeric numbers are not accepted in the first and last name fields
   await saveButton.waitFor({ state: 'visible', timeout: 10000 });
   await expect(saveButton).toBeEnabled(); //
   // Click on the save button
